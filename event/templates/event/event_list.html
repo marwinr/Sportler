@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div id="homescreen">
+        <img src="\static\bilder\background.jpeg" width="100%" height="50%">
+            <div id="homeblock">
+                <h3>If you are interested to share and extend your knowlege</h3>
+                <h4>come join us in our upcoming events</h4>
+            </div>
+</div>  
+<br>
+<br>
+<br>
+<div class="content container">
+    {% for event in events %}
+            <div class="w-130">
+                <div class="post">
+                    <div class="date">
+                    <h2><a href="{% url 'event_detail' pk=event.pk %}">{{ event.title }}</a></h2>
+                    
+                    <p>Wann? - am {{ event.date }} um {{ event.time }} | Wo? - {{ event.street}}, {{ event.city}}
+                    </div>
+                    <p>{{ event.content|linebreaksbr }}</p>
+                </div>
+        </div>
+    {% endfor %}                                       
+</div>
+
+
+{% endblock %}

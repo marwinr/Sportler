@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="container">
+    <div class="event">
+            <h2><b>New Event</b></h2>
+        <form method="POST" class="event-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-secondary">Save</button>
+        </form>
+    </div>  
+</div>
+{% endblock %}
+
