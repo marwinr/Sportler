@@ -5,8 +5,8 @@ from django.utils import timezone
 
 class Post(models.Model):
     CATEGORIE_CHOICES = (
-        ('fitness', 'Fitness'),
-        ('ernährung', 'Ernährung'),
+        ('Fitness', 'Fitness'),
+        ('Ernährung', 'Ernährung'),
     )
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)

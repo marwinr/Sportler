@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="container">
     <div class="Event">
         {% if Event.date %}
             <div class="date">
@@ -10,9 +11,9 @@
         {% if user.is_authenticated %}
             <a class="btn btn-secondary" href="{% url 'event_edit' pk=event.pk %}"><span class="glyphicon glyphicon-pencil">edit</span></a>
         {% endif %} 
-        <h2>{{ Event.title }}</h2>
+        <h2>{{ event.title }}</h2>
         <p>Wann? - am {{ event.date }} um {{ event.time }} | Wo? - {{ event.street}}, {{ event.city}}
         <p>{{ event.content|linebreaksbr }}</p>
     </div>
-    
+    </div>
 {% endblock %}
