@@ -51,14 +51,15 @@
                         <div class="post">
                             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                             <div class="date">
-                            <p>veröffentlicht: {{ post.published_date }} von {{ post.author }}</p>
+                            <p>Veröffentlicht: {{ post.published_date }} von {{ post.author }}</p>
                             </div>
-                            <p>Category: {{ post.categorie }} </p>
+                            <p>Kategorie: {{ post.categorie }} </p>
                             <div class="text">
                                     <p>{{ post.text }}</p>
                             </div>
-                            
+                            {% if post.image %}
                             <img src="{{ post.image.url }}" alt="{{ post.title }}" class="postimage">
+                            {% endif %}
                         </div>
                         <br>
                         <div class="col-md-5"></div>

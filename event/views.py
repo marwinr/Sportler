@@ -3,6 +3,7 @@ from django.shortcuts import redirect
 from .models import Event
 from .forms import EventForm
 from . import forms
+from django.utils import timezone
 
 # Create your views here.
 
@@ -32,7 +33,6 @@ def event_edit(request, pk):
         if form.is_valid():
             event = form.save(commit=False)
             event.author = request.user
-            event.date = timezone.now()
             event.save()
             return redirect('event_detail', pk=event.pk)
     else:

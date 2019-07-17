@@ -1,25 +1,26 @@
 body {
-    background-image: url('static/bilder/background.jpeg');
+    background-image: url('../bilder/background.jpeg');
 }
 a {
-    color: rgb(79, 82, 97);
+    color: white;
     font-family: 'B612 Mono', monospace;
 }
 p {
-    color: grey;
+    color: white;
 }
 
 h1{
-    color: rgb(79, 82, 97);
+    color: white;
     font-family: 'Rubik Mono One', sans-serif;
 }
 
 h2{
-    color: rgb(79, 82, 97);
+    color: white;
     font-family: 'B612 Mono', monospace;
 }
 h3,
 h4 {
+    color: #fff;
     font-family: 'Rajdhani', sans-serif;
 }
 .navbar{
@@ -36,13 +37,13 @@ h4 {
     width: 30%
 }
 
-#homeblock {
+#textblock{
     width: 60%;
     align-content: center;
     position: absolute;
-    background-color: white;
-    background-color: hsla(0, 0%, 100%, 0.7);
-    margin-top: -20%;
+    background-color: rgb(65, 59, 59);
+    background-color: hsla(60, 2%, 18%, 0.7);
+    margin-top: -27%;
     margin-left: 20%;
 }
 /* btt */

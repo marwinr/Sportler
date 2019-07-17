@@ -13,7 +13,7 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(upload_to='media/', blank=True, null=True)
     categorie = models.CharField(blank=True ,max_length=200, choices=CATEGORIE_CHOICES)
 
     def publish(self):
