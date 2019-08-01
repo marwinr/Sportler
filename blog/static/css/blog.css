@@ -43,8 +43,8 @@ h4 {
     position: absolute;
     background-color: rgb(65, 59, 59);
     background-color: hsla(60, 2%, 18%, 0.7);
-    margin-top: -27%;
-    margin-left: 20%;
+    top: 20%;
+    left: 20%;
 }
 /* btt */
 #myBtn {
